@@ -1,0 +1,1988 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT GET_LOCK('1932410105524239390', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1932410105524239390')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `active_admin_comments`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'active_admin_comments'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `points`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'points'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `protocols`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `trackers`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'trackers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/" for 127.0.0.1 at 2017-05-06 23:45:32 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 19785ms (Views: 19754.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-06 23:45:55 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (1.5ms)
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (45.8ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 283ms (Views: 253.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-06 23:45:58 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c9cI7qGvKDGaQLu5u1dnrFGq5SqP3hKh7/SnsyytqJxMXD/Oi5em6z7yajIwj/GpoQYqBhWTVB4tRhLQirwMMQ==", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (32.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-06 17:45:59', `last_sign_in_at` = '2017-05-06 17:25:25', `sign_in_count` = 12, `updated_at` = '2017-05-06 17:45:59' WHERE `users`.`id` = 1[0m
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 702ms (ActiveRecord: 73.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-06 23:45:59 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 233ms (Views: 228.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-06 23:46:01 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (2.7ms)
+  Rendered profile/_trackeractive.html.erb (0.9ms)
+  Rendered profile/_trackernoactive.html.erb (1.1ms)
+  Rendered profile/index.html.erb within layouts/application (32.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 270ms (Views: 211.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-06 23:46:03 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 233ms (Views: 182.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-06 23:46:05 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 211ms (Views: 201.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-06 23:46:53 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (2.9ms)
+  Rendered profile/_trackeractive.html.erb (0.8ms)
+  Rendered profile/_trackernoactive.html.erb (0.6ms)
+  Rendered profile/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 178ms (Views: 171.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-06 23:46:55 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 264ms (Views: 254.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-06 23:46:57 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 224ms (Views: 217.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 18:37:35 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (8.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1817ms (Views: 1768.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-07 18:37:41 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (42.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 413ms (Views: 309.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-07 18:38:05 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pJIlNlieknFSX3ToteH/V/AkYnRgE1/14aTXiGV9QM0DMxulL3l7hC6Z1LjLo18Rlm1Veu8uxjrvQAYCIyARnA==", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (21.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-07 12:38:06', `last_sign_in_at` = '2017-05-06 17:45:59', `sign_in_count` = 13, `updated_at` = '2017-05-07 12:38:06' WHERE `users`.`id` = 1[0m
+  [1m[35m (33.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 415ms (ActiveRecord: 55.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 18:38:06 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 222ms (Views: 220.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-07 18:38:09 +0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"snMKeFMDosLeSJ1MaztPsneL6hQudgb1tJNPweMYl2FjVnTgvE87Y7S5d1ZPR83tZDvSSw7oFoywx3VEUWe4pA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 30ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-07 18:38:09 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 209ms (Views: 206.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-07 18:38:50 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RoW0k+4L7w/bRvPzbrXgtkonr9DrOuENnSMf2sVTiMXknQU8TCZRXxJopgNnsLWpcx9g0lwO9KtNiOU7K/OGNg==", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-07 12:38:50', `last_sign_in_at` = '2017-05-07 12:38:06', `sign_in_count` = 14, `updated_at` = '2017-05-07 12:38:50' WHERE `users`.`id` = 1[0m
+  [1m[35m (53.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 268ms (ActiveRecord: 54.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 18:38:50 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 173ms (Views: 171.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-07 18:39:00 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (5.2ms)
+  Rendered profile/_trackeractive.html.erb (0.8ms)
+  Rendered profile/_trackernoactive.html.erb (0.9ms)
+  Rendered profile/index.html.erb within layouts/application (41.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 278ms (Views: 223.7ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-07 18:39:12 +0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CBJLdf+aEkcT3RgQCn86OR4o6iXPKoriykFilTdvD3OuNCTrCg1pIIsAEUnxucJ6WayM3BdufX7V2hc/nNO4mQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-07 18:39:12 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 210ms (Views: 208.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-07 18:39:58 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bvybUtvTYyefMUG6Gt7tmz+Y6x4TG5s1af+jnFikAEfeGsOYc/poyEP6LTHmvgj5/QbeqI8Yi113xQVVsqtQRg==", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-07 12:39:58', `last_sign_in_at` = '2017-05-07 12:38:50', `sign_in_count` = 15, `updated_at` = '2017-05-07 12:39:58' WHERE `users`.`id` = 1[0m
+  [1m[35m (48.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 262ms (ActiveRecord: 49.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 18:39:58 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 179ms (Views: 177.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-07 18:40:03 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.5ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (2.9ms)
+  Rendered profile/_trackeractive.html.erb (1.1ms)
+  Rendered profile/_trackernoactive.html.erb (1.1ms)
+  Rendered profile/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 209ms (Views: 200.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/edit.1" for 127.0.0.1 at 2017-05-07 18:41:07 +0600
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 222ms (Views: 217.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-07 18:41:14 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (2.1ms)
+  Rendered profile/_trackeractive.html.erb (1.3ms)
+  Rendered profile/_trackernoactive.html.erb (0.6ms)
+  Rendered profile/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 165ms (Views: 157.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-07 18:41:51 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 234ms (Views: 174.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-07 18:41:53 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.6ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 224ms (Views: 209.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-07 18:41:57 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.6ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 199ms (Views: 191.4ms | ActiveRecord: 1.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-07 18:42:37 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.6ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (42.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (27.9ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 722ms (Views: 644.4ms | ActiveRecord: 6.8ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/profile" for 127.0.0.1 at 2017-05-07 18:42:55 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (2.0ms)
+  Rendered profile/_trackeractive.html.erb (0.9ms)
+  Rendered profile/_trackernoactive.html.erb (0.8ms)
+  Rendered profile/index.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 240ms (Views: 229.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-07 18:42:57 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.5ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.8ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_shim.html.erb (1.9ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 208ms (Views: 190.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-07 18:43:03 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.7ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (4.3ms)
+  Rendered profile/_trackeractive.html.erb (2.1ms)
+  Rendered profile/_trackernoactive.html.erb (1.0ms)
+  Rendered profile/index.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 178ms (Views: 170.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-07 18:43:05 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (3.8ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.6ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 185ms (Views: 169.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 18:43:08 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 217ms (Views: 213.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-07 18:43:13 +0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"60C41/6rx5dzFcdLtCuhIaVpN6wtZAJEYqNMryGnXYRsYh3VnWNRaY95BjFQs2arR+CEbxF+jXTXHxSujbI6xQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-07 18:43:13 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 250ms (Views: 242.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2017-05-07 20:16:22 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  
+ActionController::RoutingError (No route matches [GET] "/profiles"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [79 times] (31.0ms)
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.9ms)
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.2ms)
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (88.5ms)
+Started GET "/" for 127.0.0.1 at 2017-05-07 20:16:26 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (22.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2851ms (Views: 2734.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-07 20:16:31 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (11.9ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (1.8ms)
+  Rendered profile/_trackeractive.html.erb (0.7ms)
+  Rendered profile/_trackernoactive.html.erb (0.6ms)
+  Rendered profile/index.html.erb within layouts/application (58.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 277ms (Views: 211.0ms | ActiveRecord: 14.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-07 20:17:01 +0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fJJII/oUJJ53pcMcr+zw3p/Zg62zZ7Jbd41sw1u+yWP7sO0hmdyyYIvJAmZLdDdUfVAwbo99PWvCMTTC96uuIg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-07 20:17:01 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (38.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 227ms (Views: 221.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-07 20:17:28 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BqmCLwDspMw1FdBc4rVaJalYQ+dw27QCMh1HgNFDt1MhcydYAb6PtmY8eGGBiqQ2nutYRFFnXPuPR7KsSCVBtw==", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-07 14:17:28', `last_sign_in_at` = '2017-05-07 12:39:58', `sign_in_count` = 16, `updated_at` = '2017-05-07 14:17:28' WHERE `users`.`id` = 1[0m
+  [1m[35m (68.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 550ms (ActiveRecord: 69.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-07 20:17:28 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 163ms (Views: 161.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 00:06:12 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (4.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Started GET "/" for 127.0.0.1 at 2017-05-08 00:06:12 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (30.5ms)
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (31.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 1944ms (Views: 1938.8ms | ActiveRecord: 3.6ms)
+
+
+Completed 200 OK in 2235ms (Views: 2162.1ms | ActiveRecord: 25.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-05-08 00:06:18 +0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xcz2PpfbbyBX6XrXGAQLtn/Zbo0c1ybe8O0U9SZlGj5Rye9qQeKUiGhdUZRbVTXHK/pc6iC8B3enNCh0B6GfHA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 14ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 00:06:18 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (39.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 252ms (Views: 245.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 00:06:23 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 200ms (Views: 198.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 17:57:05 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (8.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (12.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 3391ms (Views: 3322.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 17:57:13 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (42.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 314ms (Views: 275.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-08 17:57:15 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o9mInlgsq+p/qGf8D6dRw/dKAfwKAe2f/l0Oj+TRZ7tscGRC0qwtCrV/MFiCyXfloceT5RNmdQ95+7I2t/L1fg==", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (20.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-08 11:57:16', `last_sign_in_at` = '2017-05-07 14:17:28', `sign_in_count` = 17, `updated_at` = '2017-05-08 11:57:16' WHERE `users`.`id` = 1[0m
+  [1m[35m (34.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 400ms (ActiveRecord: 54.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 17:57:16 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 201ms (Views: 199.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 17:58:03 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (1.9ms)
+  Rendered profile/_trackeractive.html.erb (1.4ms)
+  Rendered profile/_trackernoactive.html.erb (1.7ms)
+  Rendered profile/index.html.erb within layouts/application (50.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 363ms (Views: 280.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 17:58:06 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 266ms (Views: 194.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 17:58:10 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_shim.html.erb (3.7ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 236ms (Views: 228.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 17:58:35 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (2.0ms)
+  Rendered profile/_trackeractive.html.erb (0.7ms)
+  Rendered profile/_trackernoactive.html.erb (0.6ms)
+  Rendered profile/index.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 180ms (Views: 173.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 17:58:39 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (1.5ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.6ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_shim.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 307ms (Views: 296.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 17:58:41 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.7ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.8ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 259ms (Views: 244.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:00:00 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 180ms (Views: 177.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/help" for 127.0.0.1 at 2017-05-08 18:00:07 +0600
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 196ms (Views: 184.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:00:08 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 261ms (Views: 258.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 18:00:18 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (1.6ms)
+  Rendered profile/_trackeractive.html.erb (1.0ms)
+  Rendered profile/_trackernoactive.html.erb (1.2ms)
+  Rendered profile/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 194ms (Views: 187.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:01:02 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 241ms (Views: 236.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 18:02:19 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (1.0ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (5.0ms)
+  Rendered profile/_trackeractive.html.erb (1.6ms)
+  Rendered profile/_trackernoactive.html.erb (1.9ms)
+  Rendered profile/index.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 216ms (Views: 210.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 18:14:58 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.5ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.7ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 216ms (Views: 201.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 18:15:00 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.5ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 192ms (Views: 183.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:15:19 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 162ms (Views: 160.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:28:02 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (35.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 679ms (Views: 658.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 18:28:08 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (1.8ms)
+  Rendered profile/_trackeractive.html.erb (1.7ms)
+  Rendered profile/_trackernoactive.html.erb (0.6ms)
+  Rendered profile/index.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 235ms (Views: 208.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:28:15 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 210ms (Views: 207.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:37:04 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 186ms (Views: 184.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 18:51:32 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (2.9ms)
+  Rendered profile/_trackeractive.html.erb (0.9ms)
+  Rendered profile/_trackernoactive.html.erb (0.7ms)
+  Rendered profile/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 294ms (Views: 290.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 18:51:36 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 255ms (Views: 203.3ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 18:51:38 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (1.5ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 234ms (Views: 219.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:52:27 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 210ms (Views: 208.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 19:47:47 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (37.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 3156ms (Views: 3096.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 20:07:03 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (1.4ms)
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 283ms (Views: 258.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-08 20:07:06 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cj3pifgqXK7BFL7OOzxVr93I+oZF3T5dqNk18SaJSsaA3nkncr0h+/jF9IYii8dApt3GofUFpAKhfVnEIFw0SQ==", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.2ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-08 14:07:06', `last_sign_in_at` = '2017-05-08 11:57:16', `sign_in_count` = 18, `updated_at` = '2017-05-08 14:07:06' WHERE `users`.`id` = 1[0m
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 495ms (ActiveRecord: 47.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 20:07:06 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 178ms (Views: 175.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 20:07:11 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (1.6ms)
+  Rendered profile/_trackeractive.html.erb (0.8ms)
+  Rendered profile/_trackernoactive.html.erb (0.5ms)
+  Rendered profile/index.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 254ms (Views: 190.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 20:07:13 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 270ms (Views: 199.3ms | ActiveRecord: 2.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 20:07:28 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.5ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 230ms (Views: 220.0ms | ActiveRecord: 1.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 20:07:33 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.6ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (3.4ms)
+  Rendered profile/_trackeractive.html.erb (0.7ms)
+  Rendered profile/_trackernoactive.html.erb (0.7ms)
+  Rendered profile/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 178ms (Views: 170.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 20:07:35 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 374ms (Views: 366.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 20:08:07 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.5ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (1.4ms)
+  Rendered profile/_trackeractive.html.erb (1.0ms)
+  Rendered profile/_trackernoactive.html.erb (0.9ms)
+  Rendered profile/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 601ms (Views: 594.8ms | ActiveRecord: 1.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 20:08:13 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 203ms (Views: 194.9ms | ActiveRecord: 1.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/profile" for 127.0.0.1 at 2017-05-08 20:08:54 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (1.9ms)
+  Rendered profile/_trackeractive.html.erb (0.8ms)
+  Rendered profile/_trackernoactive.html.erb (1.9ms)
+  Rendered profile/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 200ms (Views: 186.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-05-08 20:09:04 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (327.3ms)
+Completed 200 OK in 363ms (Views: 345.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at 2017-05-08 20:09:08 +0600
+Processing by Admin::PointsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (21.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `points`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT  `points`.* FROM `points` ORDER BY `points`.`id` desc LIMIT 30 OFFSET 0[0m
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers`[0m
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (379.5ms)
+Completed 200 OK in 413ms (Views: 384.6ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/admin/points/316/edit" for 127.0.0.1 at 2017-05-08 20:09:15 +0600
+Processing by Admin::PointsController#edit as HTML
+  Parameters: {"id"=>"316"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT  `points`.* FROM `points` WHERE `points`.`id` = 316 LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `points`.* FROM `points` WHERE `points`.`id` = 316 LIMIT 1[0m  [["id", 316], ["LIMIT", 1]]
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers`[0m
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/edit.html.arb (192.8ms)
+Completed 200 OK in 220ms (Views: 213.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at 2017-05-08 20:09:20 +0600
+Processing by Admin::PointsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `points`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT  `points`.* FROM `points` ORDER BY `points`.`id` desc LIMIT 30 OFFSET 0[0m
+  [1m[36mTracker Load (0.6ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTracker Load (1.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers`[0m
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (264.5ms)
+Completed 200 OK in 273ms (Views: 265.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/points/new" for 127.0.0.1 at 2017-05-08 20:09:24 +0600
+Processing by Admin::PointsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers`[0m
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (140.9ms)
+Completed 200 OK in 156ms (Views: 153.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/points" for 127.0.0.1 at 2017-05-08 20:09:47 +0600
+Processing by Admin::PointsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NHrk01modDlLJM7Vkhnqu4QA5zqXF3ztLurlFEezjgqfIyFN1rDQCyDh3c4gFeT25S1/iVsJOhzy97tya7qI9Q==", "point"=>{"longtitude"=>"74.6219", "latitude"=>"42.9856", "message"=>"", "tracker_id"=>"1"}, "commit"=>"Create Point"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.0ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6219, 42.9856, 1, '2017-05-08 14:09:47', '2017-05-08 14:09:47', '')[0m
+  [1m[35m (48.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/points/317
+Completed 302 Found in 91ms (ActiveRecord: 65.9ms)
+
+
+Started GET "/admin/points/317" for 127.0.0.1 at 2017-05-08 20:09:47 +0600
+Processing by Admin::PointsController#show as HTML
+  Parameters: {"id"=>"317"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPoint Load (0.2ms)[0m  [1m[34mSELECT  `points`.* FROM `points` WHERE `points`.`id` = 317 LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `active_admin_comments` WHERE `active_admin_comments`.`resource_type` = 'Point' AND `active_admin_comments`.`resource_id` = '317' AND `active_admin_comments`.`namespace` = 'admin'[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `active_admin_comments` WHERE `active_admin_comments`.`resource_type` = 'Point' AND `active_admin_comments`.`resource_id` = '317' AND `active_admin_comments`.`namespace` = 'admin'[0m  [["resource_type", "Point"], ["resource_id", "317"], ["namespace", "admin"]]
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (217.8ms)
+Completed 200 OK in 244ms (Views: 238.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/points" for 127.0.0.1 at 2017-05-08 20:09:54 +0600
+Processing by Admin::PointsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `points`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT  `points`.* FROM `points` ORDER BY `points`.`id` desc LIMIT 30 OFFSET 0[0m
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers`[0m
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (299.4ms)
+Completed 200 OK in 309ms (Views: 300.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 20:09:59 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 199ms (Views: 188.0ms | ActiveRecord: 1.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 20:10:09 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.8ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.6ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 212ms (Views: 203.2ms | ActiveRecord: 1.6ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/points" for 127.0.0.1 at 2017-05-08 20:10:27 +0600
+Processing by Admin::PointsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `points`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `points` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT  `points`.* FROM `points` ORDER BY `points`.`id` desc LIMIT 30 OFFSET 0[0m
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers`[0m
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (256.2ms)
+Completed 200 OK in 265ms (Views: 257.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/points/new" for 127.0.0.1 at 2017-05-08 20:10:37 +0600
+Processing by Admin::PointsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb
+  [1m[36mTracker Load (0.7ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers`[0m
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/new.html.arb (166.1ms)
+Completed 200 OK in 180ms (Views: 171.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/admin/points" for 127.0.0.1 at 2017-05-08 20:10:46 +0600
+Processing by Admin::PointsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rAx63CWdTwj80w8IEfye1oss3mKijeu68VlETv7WVBcHVb9CqoXrOpcWHBOj8JCb6gFG0W6TrUstRBoo0t9S6A==", "point"=>{"longtitude"=>"42.8856", "latitude"=>"42.8856", "message"=>"", "tracker_id"=>"1"}, "commit"=>"Create Point"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (42.8856, 42.8856, 1, '2017-05-08 14:10:46', '2017-05-08 14:10:46', '')[0m
+  [1m[35m (138.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/points/318
+Completed 302 Found in 171ms (ActiveRecord: 146.3ms)
+
+
+Started GET "/admin/points/318" for 127.0.0.1 at 2017-05-08 20:10:46 +0600
+Processing by Admin::PointsController#show as HTML
+  Parameters: {"id"=>"318"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT  `points`.* FROM `points` WHERE `points`.`id` = 318 LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `active_admin_comments` WHERE `active_admin_comments`.`resource_type` = 'Point' AND `active_admin_comments`.`resource_id` = '318' AND `active_admin_comments`.`namespace` = 'admin'[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `active_admin_comments` WHERE `active_admin_comments`.`resource_type` = 'Point' AND `active_admin_comments`.`resource_id` = '318' AND `active_admin_comments`.`namespace` = 'admin'[0m  [["resource_type", "Point"], ["resource_id", "318"], ["namespace", "admin"]]
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/show.html.arb (151.7ms)
+Completed 200 OK in 161ms (Views: 157.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 20:10:49 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.7ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.7ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 217ms (Views: 205.2ms | ActiveRecord: 1.8ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 20:38:57 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.7ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_shim.html.erb (2.1ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 371ms (Views: 362.4ms | ActiveRecord: 1.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT  `points`.* FROM `points` ORDER BY `points`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (59.6ms)[0m  [1m[31mDELETE FROM `points` WHERE `points`.`id` = 318[0m
+  [1m[35m (199.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-08 20:39:53 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 227ms (Views: 221.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-08 22:10:39 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (5.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (5.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1836ms (Views: 1789.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-09 17:44:27 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (612.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (6.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 3568ms (Views: 3519.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-09 17:44:40 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (1.8ms)
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 618ms (Views: 221.8ms | ActiveRecord: 375.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-09 17:44:44 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZlT930imlegP1wzY4PKUBy4GKSfBRJR85l5P58ea0zXgsEk8vFUpIxotExCJ8/uycI5SnoiNkul7MYNQnvh9IQ==", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (161.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (85.9ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-09 11:44:45', `last_sign_in_at` = '2017-05-08 14:07:06', `sign_in_count` = 19, `updated_at` = '2017-05-09 11:44:45' WHERE `users`.`id` = 1[0m
+  [1m[35m (137.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 727ms (ActiveRecord: 384.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-09 17:44:45 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (22.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (26.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 210ms (Views: 186.2ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-09 17:44:57 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (18.5ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (3.6ms)
+  Rendered profile/_trackeractive.html.erb (1.2ms)
+  Rendered profile/_trackernoactive.html.erb (1.0ms)
+  Rendered profile/index.html.erb within layouts/application (117.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 423ms (Views: 262.9ms | ActiveRecord: 111.5ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-09 17:45:09 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (12.5ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 370ms (Views: 189.9ms | ActiveRecord: 62.6ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-09 17:45:13 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (29.8ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 238ms (Views: 193.2ms | ActiveRecord: 38.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-09 17:45:42 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  `trackers`.* FROM `trackers` WHERE `trackers`.`id` = 1 LIMIT 1[0m
+  [1m[36mPoint Load (0.6ms)[0m  [1m[34mSELECT `points`.* FROM `points` WHERE `points`.`tracker_id` = 1[0m
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered trackers/show.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 213ms (Views: 204.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-09 17:48:24 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers` WHERE `trackers`.`user_id` = 1[0m
+  Rendered profile/_trackerinfo.html.erb (1.6ms)
+  Rendered profile/_trackeractive.html.erb (0.8ms)
+  Rendered profile/_trackernoactive.html.erb (0.6ms)
+  Rendered profile/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_shim.html.erb (1.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 188ms (Views: 181.2ms | ActiveRecord: 0.8ms)
+
+

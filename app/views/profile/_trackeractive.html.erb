@@ -1,0 +1,27 @@
+<% @users.each do |tr|%>
+
+  <% if  tr.active == true%>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>IMEI</th>
+            <th>Номер телефона</th>
+            <th>Изменён в </th>
+          </tr>
+          </thead>
+          <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td><%= link_to tr.imei_code, tracker_path(tr.id) %></td>
+        <td><%= tr.phone %></td>
+        <td><%= tr.updated_at %></td>
+        <td>
+        </td>
+      </tr>
+        <% else %>
+        <p align="center"> У вас нет активных трекеров </p>
+  <% end %>
+  <%end%>
+  </tbody>
+</table>

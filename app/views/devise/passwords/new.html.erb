@@ -1,0 +1,30 @@
+<%= render "devise/shared/css" %>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+<%= devise_error_messages! %>
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Забыли пароль?</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+				<p></p>
+					<label for="user" class="label">Почтовый адрес</label>
+					<a><%= f.email_field :email, autofocus: true, placeholder: 'example@gmail.com', class: "input" %></input>
+					</div>
+
+					<div class="group">
+						<center><%= f.submit "Войти", class: "btn btn-default" %></center>
+					</div>
+					<div class="hr"></div>
+					<div class="foot-lnk">
+						<a><%= render "devise/shared/links" %></a>
+					</div>
+				</div>
+				<div class="sign-up-htm">
+					<h1> В данный момент регистрация закрыта!</h1>
+				</div>
+			</div>
+		</div>
+		<% end %>

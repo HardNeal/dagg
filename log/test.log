@@ -1,0 +1,803 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.1ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115124, 42.872103, 1, '2017-05-08 12:37:21', '2017-05-08 12:37:21', 'low battery')[0m
+  [1m[35m (41.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.6ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'webapp_test'[0m
+  [1m[35m (247.2ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (355.5ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (233.8ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (289.2ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (200.5ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (233.7ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (221.2ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (222.6ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (256.1ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (189.4ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (222.6ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (213.1ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (232.2ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (311.4ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (256.7ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (255.8ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115124, 42.872103, 1, '2017-05-08 12:37:25', '2017-05-08 12:37:25', 'low battery')[0m
+  [1m[35m (33.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (238.7ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (189.4ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (189.4ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (280.6ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (221.7ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (223.3ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (219.9ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (300.3ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (311.7ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (200.5ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (165.8ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (211.4ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (223.0ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (290.5ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (200.6ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115124, 42.872103, 1, '2017-05-08 12:39:52', '2017-05-08 12:39:52', 'low battery')[0m
+  [1m[35m (47.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.6ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'webapp_test'[0m
+  [1m[35m (224.9ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (201.1ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (356.3ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (279.1ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (288.7ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (311.4ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (498.3ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (367.8ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (245.6ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (213.1ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (200.5ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (254.5ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (240.0ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (201.0ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (344.9ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (211.5ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (222.6ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115124, 42.872103, 1, '2017-05-08 12:39:57', '2017-05-08 12:39:57', 'low battery')[0m
+  [1m[35m (39.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (220.3ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (268.7ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (267.0ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (200.9ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (576.6ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (165.9ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (244.9ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (222.8ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (344.5ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (257.1ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (222.0ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (222.6ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (222.4ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (267.0ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (189.4ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (189.3ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (189.4ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (44.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'admin@m.r' LIMIT 1[0m
+  [1m[35mSQL (25.1ms)[0m  [1m[32mINSERT INTO `users` (`phone_number`, `created_at`, `updated_at`, `email`, `encrypted_password`) VALUES ('0555555555', '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'admin@m.r', '$2a$04$ncRvmY9ALlqaTXhOlvC/p.6ppjhuXuhoCFNbYMySS3RaVEoz9egxW')[0m
+  [1m[35m (49.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTracker Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `trackers` WHERE `trackers`.`imei_code` = BINARY '990000862471853' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `trackers` (`imei_code`, `phone`, `created_at`, `updated_at`, `user_id`) VALUES ('990000862471853', '0555555555', '2017-05-08 12:54:13', '2017-05-08 12:54:13', 1)[0m
+  [1m[35m (41.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115124, 42.872103, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115768, 42.8743916, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (63.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (30.8ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115822, 42.875626, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (32.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6131325, 42.8757282, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6153212, 42.8754609, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (28.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6173382, 42.8754609, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6171236, 42.8769705, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6172309, 42.878024, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6180677, 42.8821908, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6187115, 42.8822223, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6197844, 42.8822065, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6210504, 42.8822537, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6218443, 42.882238, 1, '2017-05-08 12:54:13', '2017-05-08 12:54:13', 'low battery')[0m
+  [1m[35m (42.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6225953, 42.882238, 1, '2017-05-08 12:54:14', '2017-05-08 12:54:14', 'low battery')[0m
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6229386, 42.8823323, 1, '2017-05-08 12:54:14', '2017-05-08 12:54:14', 'low battery')[0m
+  [1m[35m (41.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6229172, 42.8830399, 1, '2017-05-08 12:54:14', '2017-05-08 12:54:14', 'low battery')[0m
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6228743, 42.8835587, 1, '2017-05-08 12:54:14', '2017-05-08 12:54:14', 'low battery')[0m
+  [1m[35m (48.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6228313, 42.883983, 1, '2017-05-08 12:54:14', '2017-05-08 12:54:14', 'low battery')[0m
+  [1m[35m (38.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6227884, 42.8846279, 1, '2017-05-08 12:54:14', '2017-05-08 12:54:14', 'low battery')[0m
+  [1m[35m (39.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6226811, 42.8850524, 1, '2017-05-08 12:54:14', '2017-05-08 12:54:14', 'low battery')[0m
+  [1m[35m (41.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6226382, 42.8855555, 1, '2017-05-08 12:54:14', '2017-05-08 12:54:14', 'low battery')[0m
+  [1m[35m (42.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6218657, 42.8856026, 1, '2017-05-08 12:54:14', '2017-05-08 12:54:14', 'low battery')[0m
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 18:54:21 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/shared/_links.html.erb (0.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (206.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 16670ms (Views: 16561.3ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application-caa4a786821f3da65dde564bb70f4b130cb49aaab10c9b8c01b2c7e8758ae13b.css" for 127.0.0.1 at 2017-05-08 18:54:38 +0600
+Started GET "/assets/application-e396ecac58cae4c2b5541e7dc4947f55c3dde4fd55047a5b8bb4686f32a3e8f4.js" for 127.0.0.1 at 2017-05-08 18:54:38 +0600
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:54:38 +0600
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-08 18:54:40 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (75.1ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-08 12:54:40', `last_sign_in_at` = '2017-05-08 12:54:40', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2017-05-08 12:54:40' WHERE `users`.`id` = 1[0m
+  [1m[35m (94.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:34461/
+Completed 302 Found in 276ms (ActiveRecord: 170.6ms)
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:54:40 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 21ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:54:40 +0600
+Started GET "/users/edit.1" for 127.0.0.1 at 2017-05-08 18:54:44 +0600
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (39.8ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 320ms (Views: 314.4ms | ActiveRecord: 0.8ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:54:45 +0600
+Started PUT "/users" for 127.0.0.1 at 2017-05-08 18:54:48 +0600
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "tab"=>"on", "user"=>{"phone_number"=>"0777777777", "email"=>"admin@m.r", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Обновить"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.8ms)[0m  [1m[33mUPDATE `users` SET `phone_number` = '0777777777', `updated_at` = '2017-05-08 12:54:48' WHERE `users`.`id` = 1[0m
+  [1m[35m (44.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:34461/
+Completed 302 Found in 142ms (ActiveRecord: 54.8ms)
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:54:48 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:54:48 +0600
+  [1m[35m (134.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (28.8ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (50.5ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'webapp_test'[0m
+  [1m[35m (864.2ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (1316.0ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (967.5ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (6803.2ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (1386.7ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (1943.6ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (2482.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (380.8ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (297.7ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (267.0ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (278.1ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (189.4ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (224.3ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (222.6ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (221.6ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (222.5ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (256.0ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (311.3ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (118.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'admin@m.r' LIMIT 1[0m
+  [1m[35mSQL (28.5ms)[0m  [1m[32mINSERT INTO `users` (`phone_number`, `created_at`, `updated_at`, `email`, `encrypted_password`) VALUES ('0555555555', '2017-05-08 12:55:28', '2017-05-08 12:55:28', 'admin@m.r', '$2a$04$G1NAsGDHIUau8Xe3BW1KZ./L5AtMjrjuVs9pZpmmkofNPxEM6Pc7i')[0m
+  [1m[35m (100.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (20.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTracker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `trackers` WHERE `trackers`.`imei_code` = BINARY '990000862471853' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `trackers` (`imei_code`, `phone`, `created_at`, `updated_at`, `user_id`) VALUES ('990000862471853', '0555555555', '2017-05-08 12:55:28', '2017-05-08 12:55:28', 1)[0m
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.9ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115124, 42.872103, 1, '2017-05-08 12:55:28', '2017-05-08 12:55:28', 'low battery')[0m
+  [1m[35m (555.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115768, 42.8743916, 1, '2017-05-08 12:55:29', '2017-05-08 12:55:29', 'low battery')[0m
+  [1m[35m (116.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (42.1ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115822, 42.875626, 1, '2017-05-08 12:55:29', '2017-05-08 12:55:29', 'low battery')[0m
+  [1m[35m (55.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6131325, 42.8757282, 1, '2017-05-08 12:55:29', '2017-05-08 12:55:29', 'low battery')[0m
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6153212, 42.8754609, 1, '2017-05-08 12:55:29', '2017-05-08 12:55:29', 'low battery')[0m
+  [1m[35m (43.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6173382, 42.8754609, 1, '2017-05-08 12:55:29', '2017-05-08 12:55:29', 'low battery')[0m
+  [1m[35m (42.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6171236, 42.8769705, 1, '2017-05-08 12:55:29', '2017-05-08 12:55:29', 'low battery')[0m
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6172309, 42.878024, 1, '2017-05-08 12:55:29', '2017-05-08 12:55:29', 'low battery')[0m
+  [1m[35m (38.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6180677, 42.8821908, 1, '2017-05-08 12:55:29', '2017-05-08 12:55:29', 'low battery')[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6187115, 42.8822223, 1, '2017-05-08 12:55:29', '2017-05-08 12:55:29', 'low battery')[0m
+  [1m[35m (95.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6197844, 42.8822065, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (62.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6210504, 42.8822537, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (64.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6218443, 42.882238, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6225953, 42.882238, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6229386, 42.8823323, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6229172, 42.8830399, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6228743, 42.8835587, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6228313, 42.883983, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (42.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6227884, 42.8846279, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6226811, 42.8850524, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (39.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6226382, 42.8855555, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (48.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6218657, 42.8856026, 1, '2017-05-08 12:55:30', '2017-05-08 12:55:30', 'low battery')[0m
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 18:55:30 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (14.4ms)
+  Rendered devise/shared/_links.html.erb (0.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 107ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:55:31 +0600
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-08 18:55:34 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (133.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-08 12:55:34', `last_sign_in_at` = '2017-05-08 12:55:34', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2017-05-08 12:55:34' WHERE `users`.`id` = 1[0m
+  [1m[35m (164.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:34461/
+Completed 302 Found in 578ms (ActiveRecord: 299.2ms)
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:55:35 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 798ms (Views: 18.0ms | ActiveRecord: 0.5ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:55:36 +0600
+Started GET "/admin" for 127.0.0.1 at 2017-05-08 18:55:39 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (325.0ms)
+Completed 200 OK in 824ms (Views: 716.1ms | ActiveRecord: 2.6ms)
+Started GET "/admin" for 127.0.0.1 at 2017-05-08 18:55:40 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (22.4ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+Started GET "/assets/active_admin-599cdc6ba1ba20e4a37e4081e6cbecc9793ac56a1f7e3f4fd9c0eab38f67aa4e.css" for 127.0.0.1 at 2017-05-08 18:55:40 +0600
+Started GET "/assets/active_admin-ae5fdeb3412c69b9936c5bb0a2981b8e085b1bedae2bc608f7358c5b978f4b1b.js" for 127.0.0.1 at 2017-05-08 18:55:40 +0600
+Started GET "/assets/active_admin/print-87c5ffc1d869a919123bcc1dc5ec51b20bc79fd9aeab9eed77e3438c6acd4f68.css" for 127.0.0.1 at 2017-05-08 18:55:40 +0600
+Started GET "/admin/users" for 127.0.0.1 at 2017-05-08 18:55:42 +0600
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (227.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `users` LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `users` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (54.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `users` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` desc LIMIT 30 OFFSET 0[0m
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers`[0m
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (3418.0ms)
+Completed 200 OK in 3601ms (Views: 3229.2ms | ActiveRecord: 283.3ms)
+Started GET "/assets/active_admin/orderable-29374dbb55b0012d78a37c614d573bb3474f0779849b478a147d0f1845ca6617.png" for 127.0.0.1 at 2017-05-08 18:55:46 +0600
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon-d9c2bb73769af777c8a71720d29741f3a499aebd5a043e9a119bd0d9597aed47.png" for 127.0.0.1 at 2017-05-08 18:55:46 +0600
+  [1m[35m (127.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (74.8ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (1134.0ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (734.3ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (2466.0ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (744.7ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (700.2ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (333.8ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (3.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (232.8ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (244.8ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (233.8ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (333.9ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (356.0ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (335.1ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (299.1ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (333.6ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (355.9ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (722.7ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (551.3ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (338.2ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (43.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (21.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'admin@m.r' LIMIT 1[0m
+  [1m[35mSQL (5.7ms)[0m  [1m[32mINSERT INTO `users` (`phone_number`, `created_at`, `updated_at`, `email`, `encrypted_password`) VALUES ('0555555555', '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'admin@m.r', '$2a$04$pjSqN9cNv5FucnIclUjV0OZJwhwqZe6bQLKHRapIduO0ygi3iRpJq')[0m
+  [1m[35m (33.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTracker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `trackers` WHERE `trackers`.`imei_code` = BINARY '990000862471853' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `trackers` (`imei_code`, `phone`, `created_at`, `updated_at`, `user_id`) VALUES ('990000862471853', '0555555555', '2017-05-08 12:57:57', '2017-05-08 12:57:57', 1)[0m
+  [1m[35m (43.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115124, 42.872103, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115768, 42.8743916, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (86.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (39.9ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115822, 42.875626, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (43.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6131325, 42.8757282, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6153212, 42.8754609, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (41.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6173382, 42.8754609, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6171236, 42.8769705, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6172309, 42.878024, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6180677, 42.8821908, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6187115, 42.8822223, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6197844, 42.8822065, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6210504, 42.8822537, 1, '2017-05-08 12:57:57', '2017-05-08 12:57:57', 'low battery')[0m
+  [1m[35m (84.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6218443, 42.882238, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6225953, 42.882238, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6229386, 42.8823323, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6229172, 42.8830399, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (38.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6228743, 42.8835587, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (38.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6228313, 42.883983, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6227884, 42.8846279, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (48.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6226811, 42.8850524, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (39.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6226382, 42.8855555, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6218657, 42.8856026, 1, '2017-05-08 12:57:58', '2017-05-08 12:57:58', 'low battery')[0m
+  [1m[35m (38.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 18:58:11 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (65.4ms)
+  Rendered layouts/_shim.html.erb (2.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 4421ms (Views: 4301.4ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application-caa4a786821f3da65dde564bb70f4b130cb49aaab10c9b8c01b2c7e8758ae13b.css" for 127.0.0.1 at 2017-05-08 18:58:15 +0600
+Started GET "/assets/application-e396ecac58cae4c2b5541e7dc4947f55c3dde4fd55047a5b8bb4686f32a3e8f4.js" for 127.0.0.1 at 2017-05-08 18:58:15 +0600
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:58:15 +0600
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-08 18:58:18 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (10.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.4ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-08 12:58:18', `last_sign_in_at` = '2017-05-08 12:58:18', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2017-05-08 12:58:18' WHERE `users`.`id` = 1[0m
+  [1m[35m (46.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:38776/
+Completed 302 Found in 160ms (ActiveRecord: 75.9ms)
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:58:18 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (6.4ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 35ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:58:18 +0600
+Started GET "/users/edit.1" for 127.0.0.1 at 2017-05-08 18:58:21 +0600
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_shim.html.erb (1.6ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 165ms (Views: 160.2ms | ActiveRecord: 0.5ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:58:21 +0600
+Started PUT "/users" for 127.0.0.1 at 2017-05-08 18:58:25 +0600
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "tab"=>"on", "user"=>{"phone_number"=>"0777777777", "email"=>"admin@m.r", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Обновить"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (15.0ms)[0m  [1m[33mUPDATE `users` SET `phone_number` = '0777777777', `updated_at` = '2017-05-08 12:58:25' WHERE `users`.`id` = 1[0m
+  [1m[35m (59.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:38776/
+Completed 302 Found in 180ms (ActiveRecord: 77.9ms)
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:58:25 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (3.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (10.1ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 46ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:58:25 +0600
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (7.7ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (808.9ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.5ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'webapp_test'[0m
+  [1m[35m (984.9ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (401.2ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (832.0ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (5063.7ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (1692.4ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (1207.8ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (560.1ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (278.4ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (458.4ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (282.2ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (265.3ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (197.8ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (364.6ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (555.9ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (434.6ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (378.5ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (257.6ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (234.9ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (59.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (927.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'admin@m.r' LIMIT 1[0m
+  [1m[35mSQL (291.0ms)[0m  [1m[32mINSERT INTO `users` (`phone_number`, `created_at`, `updated_at`, `email`, `encrypted_password`) VALUES ('0555555555', '2017-05-08 12:58:49', '2017-05-08 12:58:49', 'admin@m.r', '$2a$04$2hBEdzvdmFI.53BW/gYGF.c.43zJnzTdqjMrFz71lrObpcVf40KzG')[0m
+  [1m[35m (142.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (50.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTracker Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `trackers` WHERE `trackers`.`imei_code` = BINARY '990000862471853' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `trackers` (`imei_code`, `phone`, `created_at`, `updated_at`, `user_id`) VALUES ('990000862471853', '0555555555', '2017-05-08 12:58:50', '2017-05-08 12:58:50', 1)[0m
+  [1m[35m (179.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (42.9ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115124, 42.872103, 1, '2017-05-08 12:58:50', '2017-05-08 12:58:50', 'low battery')[0m
+  [1m[35m (209.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115768, 42.8743916, 1, '2017-05-08 12:58:50', '2017-05-08 12:58:50', 'low battery')[0m
+  [1m[35m (234.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (792.9ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6115822, 42.875626, 1, '2017-05-08 12:58:50', '2017-05-08 12:58:50', 'low battery')[0m
+  [1m[35m (271.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6131325, 42.8757282, 1, '2017-05-08 12:58:51', '2017-05-08 12:58:51', 'low battery')[0m
+  [1m[35m (389.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6153212, 42.8754609, 1, '2017-05-08 12:58:52', '2017-05-08 12:58:52', 'low battery')[0m
+  [1m[35m (328.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6173382, 42.8754609, 1, '2017-05-08 12:58:52', '2017-05-08 12:58:52', 'low battery')[0m
+  [1m[35m (163.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6171236, 42.8769705, 1, '2017-05-08 12:58:52', '2017-05-08 12:58:52', 'low battery')[0m
+  [1m[35m (261.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6172309, 42.878024, 1, '2017-05-08 12:58:53', '2017-05-08 12:58:53', 'low battery')[0m
+  [1m[35m (262.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6180677, 42.8821908, 1, '2017-05-08 12:58:53', '2017-05-08 12:58:53', 'low battery')[0m
+  [1m[35m (152.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6187115, 42.8822223, 1, '2017-05-08 12:58:53', '2017-05-08 12:58:53', 'low battery')[0m
+  [1m[35m (185.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6197844, 42.8822065, 1, '2017-05-08 12:58:53', '2017-05-08 12:58:53', 'low battery')[0m
+  [1m[35m (269.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6210504, 42.8822537, 1, '2017-05-08 12:58:53', '2017-05-08 12:58:53', 'low battery')[0m
+  [1m[35m (495.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6218443, 42.882238, 1, '2017-05-08 12:58:54', '2017-05-08 12:58:54', 'low battery')[0m
+  [1m[35m (163.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6225953, 42.882238, 1, '2017-05-08 12:58:54', '2017-05-08 12:58:54', 'low battery')[0m
+  [1m[35m (171.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6229386, 42.8823323, 1, '2017-05-08 12:58:54', '2017-05-08 12:58:54', 'low battery')[0m
+  [1m[35m (297.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6229172, 42.8830399, 1, '2017-05-08 12:58:55', '2017-05-08 12:58:55', 'low battery')[0m
+  [1m[35m (473.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (90.4ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6228743, 42.8835587, 1, '2017-05-08 12:58:55', '2017-05-08 12:58:55', 'low battery')[0m
+  [1m[35m (268.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6228313, 42.883983, 1, '2017-05-08 12:58:55', '2017-05-08 12:58:55', 'low battery')[0m
+  [1m[35m (444.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6227884, 42.8846279, 1, '2017-05-08 12:58:56', '2017-05-08 12:58:56', 'low battery')[0m
+  [1m[35m (627.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6226811, 42.8850524, 1, '2017-05-08 12:58:56', '2017-05-08 12:58:56', 'low battery')[0m
+  [1m[35m (420.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6226382, 42.8855555, 1, '2017-05-08 12:58:57', '2017-05-08 12:58:57', 'low battery')[0m
+  [1m[35m (210.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `points` (`longtitude`, `latitude`, `tracker_id`, `created_at`, `updated_at`, `message`) VALUES (74.6218657, 42.8856026, 1, '2017-05-08 12:58:57', '2017-05-08 12:58:57', 'low battery')[0m
+  [1m[35m (383.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-08 18:58:58 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (479.7ms)
+  Rendered layouts/_shim.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 1441ms (Views: 1205.3ms | ActiveRecord: 0.0ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:59:00 +0600
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-08 18:59:06 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (48.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'admin@m.r' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (119.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-05-08 12:59:06', `last_sign_in_at` = '2017-05-08 12:59:06', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2017-05-08 12:59:06' WHERE `users`.`id` = 1[0m
+  [1m[35m (170.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:38776/
+Completed 302 Found in 459ms (ActiveRecord: 338.3ms)
+Started GET "/" for 127.0.0.1 at 2017-05-08 18:59:07 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+Started GET "/assets/switchery.css" for 127.0.0.1 at 2017-05-08 18:59:07 +0600
+Started GET "/admin" for 127.0.0.1 at 2017-05-08 18:59:08 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (173.1ms)
+Completed 200 OK in 590ms (Views: 324.4ms | ActiveRecord: 0.4ms)
+Started GET "/admin" for 127.0.0.1 at 2017-05-08 18:59:09 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (35.1ms)
+Completed 200 OK in 45ms (Views: 38.7ms | ActiveRecord: 0.6ms)
+Started GET "/assets/active_admin-599cdc6ba1ba20e4a37e4081e6cbecc9793ac56a1f7e3f4fd9c0eab38f67aa4e.css" for 127.0.0.1 at 2017-05-08 18:59:09 +0600
+Started GET "/assets/active_admin-ae5fdeb3412c69b9936c5bb0a2981b8e085b1bedae2bc608f7358c5b978f4b1b.js" for 127.0.0.1 at 2017-05-08 18:59:09 +0600
+Started GET "/assets/active_admin/print-87c5ffc1d869a919123bcc1dc5ec51b20bc79fd9aeab9eed77e3438c6acd4f68.css" for 127.0.0.1 at 2017-05-08 18:59:09 +0600
+Started GET "/admin/users" for 127.0.0.1 at 2017-05-08 18:59:10 +0600
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb
+  [1m[35m (94.7ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `users` LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `users` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (46.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `users` LIMIT 30 OFFSET 0) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` desc LIMIT 30 OFFSET 0[0m
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT `trackers`.* FROM `trackers`[0m
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/resource/index.html.arb (1039.8ms)
+Completed 200 OK in 1181ms (Views: 961.2ms | ActiveRecord: 142.1ms)
+Started GET "/assets/active_admin/orderable-29374dbb55b0012d78a37c614d573bb3474f0779849b478a147d0f1845ca6617.png" for 127.0.0.1 at 2017-05-08 18:59:11 +0600
+Started GET "/assets/active_admin/datepicker/datepicker-input-icon-d9c2bb73769af777c8a71720d29741f3a499aebd5a043e9a119bd0d9597aed47.png" for 127.0.0.1 at 2017-05-08 18:59:11 +0600
+Started DELETE "/admin/users/1" for 127.0.0.1 at 2017-05-08 18:59:15 +0600
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://127.0.0.1:38776/admin/dashboard
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+Started GET "/admin/dashboard" for 127.0.0.1 at 2017-05-08 18:59:15 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (14.5ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (497.2ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (868.3ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (721.6ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (312.2ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (533.3ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (1599.7ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (349.4ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (344.8ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (633.4ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (257.5ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (222.7ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (271.5ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (484.0ms)[0m  [1m[35mTRUNCATE TABLE `active_admin_comments`;[0m
+  [1m[35m (254.7ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (289.5ms)[0m  [1m[35mTRUNCATE TABLE `points`;[0m
+  [1m[35m (478.1ms)[0m  [1m[35mTRUNCATE TABLE `protocols`;[0m
+  [1m[35m (524.3ms)[0m  [1m[35mTRUNCATE TABLE `trackers`;[0m
+  [1m[35m (298.5ms)[0m  [1m[35mTRUNCATE TABLE `users`;[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m

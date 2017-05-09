@@ -1,0 +1,29 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>IMEI</th>
+    <th>Номер телефона</th>
+    <th>Дата создания</th>
+  </tr>
+  </thead>
+  <tbody>
+<% @users.each do |tr|%>
+  <tr>
+    <th scope="row" class="number">1</th>
+    <td><b><%= link_to tr.imei_code, tracker_path(tr.id) %></b></td>
+    <td><%= tr.phone %></td>
+    <td><%= tr.updated_at %></td> 
+    <td>
+      <%= form_for tr, :url => profile_path(tr), method: :put  do |f| %>
+          <% if tr.active == false%>
+          <%= f.submit "Активировать", class: "btn btn-success btn-xs", data: { confirm: 'Вы уверены ? ' } %>
+              <% else %>
+              <%= f.submit "Деактивировать", class: "btn btn-danger btn-xs", data: { confirm: 'Вы уверены ? ' } %>
+              <% end %>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

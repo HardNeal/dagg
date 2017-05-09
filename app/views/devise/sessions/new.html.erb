@@ -1,0 +1,50 @@
+<%= render "devise/shared/css" %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<center>
+  <b>
+    <% flash.each do |key, value| %>
+     <div class="alert alert-default" role="alert">
+      <div ><%= value %></div>
+     </div>
+    <% end %>
+  </b>
+</center>
+
+<div class="login-wrap" id="form-sign">
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Вход</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Регистрация</label>
+    <div class="login-form">
+      <div class="sign-in-htm">
+        <div class="group">
+          <label for="user" class="label">Почтовый адрес</label>
+          <a><%= f.email_field :email, placeholder: 'ex: hello@gmail.com', class: "input" %></input>
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Пароль<br/>
+          <a id="pass"><%= f.password_field :password, placeholder: 'ex: 123456', autocomplete: "off", class: "input" %><br/>
+        </div>
+        <div class="group">
+         <% if devise_mapping.rememberable? -%>
+          <input id="check" type="checkbox" class="check" checked>
+          <label for="check"><span class="icon"></span>      
+         <%= f.label :remember_me %></label>
+         <% end %>
+        </div>
+        <div class="group">
+          <center><%= f.submit "Войти", class: "btn btn-default" %></center>
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+          <a ><%= render "devise/shared/links" %></a>
+        </div>
+    </div>
+      <div class="sign-up-htm">
+       <h1> В данный момент регистрация закрыта!</h1>
+       <div class="hr"></div>
+       <a ><%= render "devise/shared/links" %></a>
+      </div>
+  </div>
+</div>
+<% end %>
