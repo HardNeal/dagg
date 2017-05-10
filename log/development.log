@@ -1986,3 +1986,1480 @@ Processing by ProfileController#index as HTML
 Completed 200 OK in 188ms (Views: 181.2ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-05-10 13:43:16 +0600
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.9ms)
+  [1m[35m (124.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (112.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170411095610)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "phone_number" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411095610"]]
+  [1m[35m (122.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsers (20170411095640)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411095640"]]
+  [1m[35m (136.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveAdminComments (20170411101622)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateActiveAdminComments < ActiveRecord::Migration[4.2] (called from load at /home/ulan/.rvm/gems/ruby-2.3.3/bin/rake:22)
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_id" varchar NOT NULL, "resource_type" varchar NOT NULL, "author_type" varchar, "author_id" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411101622"]]
+  [1m[35m (93.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAdminToUsers (20170411103129)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411103129"]]
+  [1m[35m (91.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTrackers (20170411104452)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "trackers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "imei" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411104452"]]
+  [1m[35m (113.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePoints (20170411120844)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "points" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "longtitude" varchar, "latitude" varchar, "tracker_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_points_on_tracker_id" ON "points" ("tracker_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411120844"]]
+  [1m[35m (115.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeImeiToImeiCode (20170411141902)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atrackers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "imei_code" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atrackers" ("id","imei_code","phone","created_at","updated_at")
+                     SELECT "id","imei","phone","created_at","updated_at" FROM "trackers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "trackers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "trackers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "imei_code" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "trackers" ("id","imei_code","phone","created_at","updated_at")
+                     SELECT "id","imei_code","phone","created_at","updated_at" FROM "atrackers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atrackers"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411141902"]]
+  [1m[35m (76.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeDataTypeForLongtitude (20170411145224)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apoints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "longtitude" varchar, "latitude" varchar, "tracker_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_apoints_on_tracker_id" ON "apoints" ("tracker_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apoints" ("id","longtitude","latitude","tracker_id","created_at","updated_at")
+                     SELECT "id","longtitude","latitude","tracker_id","created_at","updated_at" FROM "points"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "points"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "points" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "longtitude" decimal, "latitude" varchar, "tracker_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_apoints_on_tracker_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_apoints_on_tracker_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_points_on_tracker_id" ON "points" ("tracker_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "points" ("id","longtitude","latitude","tracker_id","created_at","updated_at")
+                     SELECT "id","longtitude","latitude","tracker_id","created_at","updated_at" FROM "apoints"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "apoints"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411145224"]]
+  [1m[35m (84.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeDataTypeForLatitude (20170411150159)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apoints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "longtitude" decimal, "latitude" varchar, "tracker_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_apoints_on_tracker_id" ON "apoints" ("tracker_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apoints" ("id","longtitude","latitude","tracker_id","created_at","updated_at")
+                     SELECT "id","longtitude","latitude","tracker_id","created_at","updated_at" FROM "points"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "points"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "points" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "longtitude" decimal, "latitude" decimal, "tracker_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_apoints_on_tracker_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_apoints_on_tracker_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_points_on_tracker_id" ON "points" ("tracker_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "points" ("id","longtitude","latitude","tracker_id","created_at","updated_at")
+                     SELECT "id","longtitude","latitude","tracker_id","created_at","updated_at" FROM "apoints"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "apoints"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411150159"]]
+  [1m[35m (79.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddTimestampToPoints (20170411153043)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "points" ADD "point_time" datetime[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170411153043"]]
+  [1m[35m (74.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddInformationToUsers (20170415130226)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "information" text[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170415130226"]]
+  [1m[35m (75.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddActiveToUsers (20170417130442)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "active" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170417130442"]]
+  [1m[35m (75.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnToTrackers (20170417154354)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "trackers" ADD "user_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_trackers_on_user_id" ON "trackers" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170417154354"]]
+  [1m[35m (125.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddTitleToTrackers (20170418121259)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "trackers" ADD "title" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170418121259"]]
+  [1m[35m (79.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProtocols (20170425130031)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "protocols" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170425130031"]]
+  [1m[35m (115.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddProtocolToTrackers (20170425132032)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "trackers" ADD "protocol_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trackers_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trackers_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_trackers_on_protocol_id" ON "trackers" ("protocol_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170425132032"]]
+  [1m[35m (128.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddActiveToTrackers (20170426093130)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "trackers" ADD "active" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170426093130"]]
+  [1m[35m (86.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangelongtitudeToFloat (20170505112724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apoints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "longtitude" decimal, "latitude" decimal, "tracker_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "point_time" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_apoints_on_tracker_id" ON "apoints" ("tracker_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apoints" ("id","longtitude","latitude","tracker_id","created_at","updated_at","point_time")
+                     SELECT "id","longtitude","latitude","tracker_id","created_at","updated_at","point_time" FROM "points"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "points"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "points" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "longtitude" float, "latitude" decimal, "tracker_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "point_time" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_apoints_on_tracker_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_apoints_on_tracker_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_points_on_tracker_id" ON "points" ("tracker_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "points" ("id","longtitude","latitude","tracker_id","created_at","updated_at","point_time")
+                     SELECT "id","longtitude","latitude","tracker_id","created_at","updated_at","point_time" FROM "apoints"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "apoints"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170505112724"]]
+  [1m[35m (86.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeLatitudeToFloat (20170505113023)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apoints" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "longtitude" float, "latitude" decimal, "tracker_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "point_time" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_apoints_on_tracker_id" ON "apoints" ("tracker_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apoints" ("id","longtitude","latitude","tracker_id","created_at","updated_at","point_time")
+                     SELECT "id","longtitude","latitude","tracker_id","created_at","updated_at","point_time" FROM "points"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "points"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "points" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "longtitude" float, "latitude" float, "tracker_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "point_time" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_apoints_on_tracker_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_apoints_on_tracker_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_points_on_tracker_id" ON "points" ("tracker_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "points" ("id","longtitude","latitude","tracker_id","created_at","updated_at","point_time")
+                     SELECT "id","longtitude","latitude","tracker_id","created_at","updated_at","point_time" FROM "apoints"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "apoints"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170505113023"]]
+  [1m[35m (79.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMessageToPoints (20170505144002)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "points" ADD "message" text[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170505144002"]]
+  [1m[35m (81.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-10 07:43:29 UTC], ["updated_at", 2017-05-10 07:43:29 UTC]]
+  [1m[35m (84.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_points_on_tracker_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trackers_on_protocol_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trackers_on_protocol_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_trackers_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_trackers_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@m.r"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("phone_number", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["phone_number", "0555555555"], ["created_at", 2017-05-10 07:43:37 UTC], ["updated_at", 2017-05-10 07:43:37 UTC], ["email", "admin@m.r"], ["encrypted_password", "$2a$11$pUTGKj6n6p8VkFuT5pYPwer1VK7cwRRtmC2QniKBIvNqXpICWSCkW"]]
+  [1m[35m (90.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTracker Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trackers" WHERE "trackers"."imei_code" = ? LIMIT ?[0m  [["imei_code", "990000862471853"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "trackers" ("imei_code", "phone", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["imei_code", "990000862471853"], ["phone", "0555555555"], ["created_at", 2017-05-10 07:43:37 UTC], ["updated_at", 2017-05-10 07:43:37 UTC], ["user_id", 1]]
+  [1m[35m (85.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6115124], ["latitude", 42.872103], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:37 UTC], ["updated_at", 2017-05-10 07:43:37 UTC], ["message", "low battery"]]
+  [1m[35m (84.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6115768], ["latitude", 42.8743916], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:37 UTC], ["updated_at", 2017-05-10 07:43:37 UTC], ["message", "low battery"]]
+  [1m[35m (69.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6115822], ["latitude", 42.875626], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:37 UTC], ["updated_at", 2017-05-10 07:43:37 UTC], ["message", "low battery"]]
+  [1m[35m (74.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6131325], ["latitude", 42.8757282], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (75.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6153212], ["latitude", 42.8754609], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (86.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6173382], ["latitude", 42.8754609], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (75.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6171236], ["latitude", 42.8769705], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (71.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6172309], ["latitude", 42.878024], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (75.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6180677], ["latitude", 42.8821908], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (141.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6187115], ["latitude", 42.8822223], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (82.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6197844], ["latitude", 42.8822065], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (86.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6210504], ["latitude", 42.8822537], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (133.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6218443], ["latitude", 42.882238], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (101.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6225953], ["latitude", 42.882238], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:38 UTC], ["updated_at", 2017-05-10 07:43:38 UTC], ["message", "low battery"]]
+  [1m[35m (98.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6229386], ["latitude", 42.8823323], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:39 UTC], ["updated_at", 2017-05-10 07:43:39 UTC], ["message", "low battery"]]
+  [1m[35m (79.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6229172], ["latitude", 42.8830399], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:39 UTC], ["updated_at", 2017-05-10 07:43:39 UTC], ["message", "low battery"]]
+  [1m[35m (80.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6228743], ["latitude", 42.8835587], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:39 UTC], ["updated_at", 2017-05-10 07:43:39 UTC], ["message", "low battery"]]
+  [1m[35m (97.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6228313], ["latitude", 42.883983], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:39 UTC], ["updated_at", 2017-05-10 07:43:39 UTC], ["message", "low battery"]]
+  [1m[35m (97.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6227884], ["latitude", 42.8846279], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:39 UTC], ["updated_at", 2017-05-10 07:43:39 UTC], ["message", "low battery"]]
+  [1m[35m (97.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6226811], ["latitude", 42.8850524], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:39 UTC], ["updated_at", 2017-05-10 07:43:39 UTC], ["message", "low battery"]]
+  [1m[35m (97.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6226382], ["latitude", 42.8855555], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:39 UTC], ["updated_at", 2017-05-10 07:43:39 UTC], ["message", "low battery"]]
+  [1m[35m (197.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "points" ("longtitude", "latitude", "tracker_id", "created_at", "updated_at", "message") VALUES (?, ?, ?, ?, ?, ?)[0m  [["longtitude", 74.6218657], ["latitude", 42.8856026], ["tracker_id", 1], ["created_at", 2017-05-10 07:43:39 UTC], ["updated_at", 2017-05-10 07:43:39 UTC], ["message", "low battery"]]
+  [1m[35m (97.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-05-10 13:43:46 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 3282ms (Views: 3221.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-05-10 13:43:53 +0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_css.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 287ms (Views: 267.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-05-10 13:43:55 +0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uSvtcv/PyVSkpz4NosZbwiGrhp7wRmylJxyOMouUiuoJh6ISjgXb42m/n2fAbLS6nWIl5BrSYIh2YP1wPvM3Xg==", "tab"=>"on", "user"=>{"email"=>"admin@m.r", "password"=>"[FILTERED]"}, "commit"=>"Войти"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@m.r"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-05-10 07:43:55 UTC], ["last_sign_in_at", 2017-05-10 07:43:55 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2017-05-10 07:43:55 UTC], ["id", 1]]
+  [1m[35m (97.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 361ms (ActiveRecord: 100.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 13:43:55 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 203ms (Views: 201.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 13:43:58 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (2.0ms)
+  Rendered profile/_trackeractive.html.erb (0.9ms)
+  Rendered profile/_trackernoactive.html.erb (2.3ms)
+  Rendered profile/index.html.erb within layouts/application (35.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 314ms (Views: 272.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 13:44:00 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 268ms (Views: 188.8ms | ActiveRecord: 1.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 13:46:04 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 339ms (Views: 328.2ms | ActiveRecord: 1.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 13:47:53 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.4ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (2.1ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 294ms (Views: 282.3ms | ActiveRecord: 2.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 13:48:03 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 231ms (Views: 219.6ms | ActiveRecord: 0.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-05-10 13:49:25 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 210ms (Views: 208.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 13:54:34 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 194ms (Views: 191.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 13:56:59 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 230ms (Views: 228.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 13:57:05 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 259ms (Views: 251.5ms | ActiveRecord: 0.8ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:01:04 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 233ms (Views: 222.0ms | ActiveRecord: 0.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-05-10 14:01:05 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 286ms (Views: 284.2ms | ActiveRecord: 0.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 14:01:18 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (2.0ms)
+  Rendered profile/_trackeractive.html.erb (0.7ms)
+  Rendered profile/_trackernoactive.html.erb (0.8ms)
+  Rendered profile/index.html.erb within layouts/application (29.9ms)
+  Rendered layouts/_shim.html.erb (1.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 216ms (Views: 211.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:01:21 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.2ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 183ms (Views: 178.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:02:02 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 227ms (Views: 219.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 14:21:01 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (3.7ms)
+  Rendered profile/_trackeractive.html.erb (0.6ms)
+  Rendered profile/_trackernoactive.html.erb (0.6ms)
+  Rendered profile/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 256ms (Views: 252.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:21:19 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (1.8ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 174ms (Views: 167.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 14:21:34 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (1.5ms)
+  Rendered profile/_trackeractive.html.erb (0.7ms)
+  Rendered profile/_trackernoactive.html.erb (0.7ms)
+  Rendered profile/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 171ms (Views: 165.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 14:31:11 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 187ms (Views: 184.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 14:31:14 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (2.6ms)
+  Rendered profile/_trackeractive.html.erb (0.7ms)
+  Rendered profile/_trackernoactive.html.erb (0.8ms)
+  Rendered profile/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 197ms (Views: 191.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:37:31 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.6ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_shim.html.erb (1.6ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 214ms (Views: 202.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:44:43 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.4ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 212ms (Views: 205.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:46:12 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 194ms (Views: 186.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:46:16 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.2ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 197ms (Views: 192.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:46:23 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 212ms (Views: 200.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:47:48 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.2ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 220ms (Views: 214.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:49:13 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 235ms (Views: 227.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:51:53 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.5ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_shim.html.erb (1.3ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 284ms (Views: 274.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:52:18 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.3ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 222ms (Views: 211.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 14:52:25 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 247ms (Views: 238.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 14:54:42 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 212ms (Views: 210.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 15:01:50 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (1.5ms)
+  Rendered profile/_trackeractive.html.erb (0.5ms)
+  Rendered profile/_trackernoactive.html.erb (0.6ms)
+  Rendered profile/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 197ms (Views: 190.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 15:01:51 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (2.3ms)
+  Rendered profile/_trackeractive.html.erb (1.5ms)
+  Rendered profile/_trackernoactive.html.erb (0.7ms)
+  Rendered profile/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 188ms (Views: 182.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 15:01:54 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.6ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 238ms (Views: 225.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 15:01:58 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 183ms (Views: 179.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 15:01:59 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (3.9ms)
+  Rendered profile/_trackeractive.html.erb (1.7ms)
+  Rendered profile/_trackernoactive.html.erb (0.7ms)
+  Rendered profile/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 228ms (Views: 221.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 15:12:03 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (1.5ms)
+  Rendered profile/_trackeractive.html.erb (0.6ms)
+  Rendered profile/_trackernoactive.html.erb (1.2ms)
+  Rendered profile/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 226ms (Views: 221.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 15:12:04 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.2ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 193ms (Views: 188.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 15:12:35 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.7ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 215ms (Views: 204.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 16:00:55 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+Started GET "/" for 127.0.0.1 at 2017-05-10 16:00:55 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 527ms (Views: 523.9ms | ActiveRecord: 0.6ms)
+
+
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 521ms (Views: 519.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 16:00:58 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (1.6ms)
+  Rendered profile/_trackeractive.html.erb (0.6ms)
+  Rendered profile/_trackernoactive.html.erb (0.8ms)
+  Rendered profile/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 202ms (Views: 196.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 16:01:01 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.7ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 199ms (Views: 187.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 16:01:42 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (1.6ms)
+  Rendered profile/_trackeractive.html.erb (0.7ms)
+  Rendered profile/_trackernoactive.html.erb (1.3ms)
+  Rendered profile/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 196ms (Views: 189.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 16:01:45 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 173ms (Views: 172.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-05-10 16:01:48 +0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb
+  Rendered /home/ulan/.rvm/gems/ruby-2.3.3/gems/activeadmin-1.0.0.pre4/app/views/active_admin/page/index.html.arb (404.7ms)
+Completed 200 OK in 782ms (Views: 502.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 16:02:37 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 241ms (Views: 190.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 16:02:46 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 195ms (Views: 191.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 16:03:22 +0600
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.9ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (1.6ms)
+  Rendered profile/_trackeractive.html.erb (0.6ms)
+  Rendered profile/_trackernoactive.html.erb (0.8ms)
+  Rendered profile/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 200ms (Views: 194.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 16:03:24 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.1ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 199ms (Views: 191.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 16:05:40 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (62.8ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.2ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 278ms (Views: 207.6ms | ActiveRecord: 63.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-10 19:02:40 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+Started GET "/" for 127.0.0.1 at 2017-05-10 19:02:41 +0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (24.3ms)
+  Rendered layouts/_header.html.erb (17.8ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 3214ms (Views: 3209.3ms | ActiveRecord: 1.5ms)
+
+
+  Rendered layouts/_footer.html.erb (1.8ms)
+Completed 200 OK in 3760ms (Views: 3710.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2017-05-10 19:02:46 +0600
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ProfileController> at /home/ulan/car-tracker/web-app/app/controllers/profile_controller.rb:2)
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT "trackers".* FROM "trackers" WHERE "trackers"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered profile/_trackerinfo.html.erb (8.3ms)
+  Rendered profile/_trackeractive.html.erb (1.2ms)
+  Rendered profile/_trackernoactive.html.erb (1.4ms)
+  Rendered profile/index.html.erb within layouts/application (48.9ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 357ms (Views: 314.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/trackers/1" for 127.0.0.1 at 2017-05-10 19:02:49 +0600
+Processing by TrackersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTracker Load (0.2ms)[0m  [1m[34mSELECT  "trackers".* FROM "trackers" WHERE "trackers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPoint Load (0.3ms)[0m  [1m[34mSELECT "points".* FROM "points" WHERE "points"."tracker_id" = ?[0m  [["tracker_id", 1]]
+  Rendering trackers/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trackers/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 264ms (Views: 207.6ms | ActiveRecord: 1.3ms)
+
+

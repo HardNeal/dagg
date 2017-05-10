@@ -107,7 +107,7 @@ calcRoute();
 var handler = Gmaps.build('Google');
 handler.buildMap({ internal: {id: 'map'}}, function(){
   directionsDisplay.setMap(handler.getMap());
-  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  markers = handler.add(<%=raw @hash.to_json %>);
    handler.bounds.extendWith(markers);
    handler.fitMapToBounds();
 
