@@ -23,7 +23,7 @@ end
 
 
 server = DatTCP::Server.new(Worker)
-server.listen('localhost', 2000)
+server.listen('188.120.242.28', 2000)
 server.start.join
 s = Worker.new
 s.work!
